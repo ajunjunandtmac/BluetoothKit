@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name                  = 'BluetoothKit'
+  s.name                  = 'SDMBluetoothKit'
   s.version               = '0.0.1'
   s.summary               = 'Bluetooth SDK'
   s.description           = <<-DESC
