@@ -1,0 +1,278 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name BluetoothSDK
+@_exported import BluetoothSDK
+import CoreBluetooth
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+extension Swift.Int {
+  public var toU8: Swift.UInt8 {
+    get
+  }
+  public var to8: Swift.Int8 {
+    get
+  }
+  public var toU16: Swift.UInt16 {
+    get
+  }
+  public var to16: Swift.Int16 {
+    get
+  }
+  public var toU32: Swift.UInt32 {
+    get
+  }
+  public var to32: Swift.Int32 {
+    get
+  }
+  public var toU64: Swift.UInt64 {
+    get
+  }
+  public var to64: Swift.Int64 {
+    get
+  }
+  public func convertToBytesWithBigEndianType(_ length: Swift.UInt) -> [Swift.UInt8]
+  public func convertToBytesWithLittleEndianType(_ length: Swift.UInt) -> [Swift.UInt8]
+}
+extension Swift.Int : BluetoothSDK.BluetoothSendableDataProtocol, BluetoothSDK.BluetoothReceivableDataProtocol {
+}
+@_hasMissingDesignatedInitializers public class BluetoothIOTTool {
+  public typealias HexString = Swift.String
+  public typealias DecimalString = Swift.String
+  @_hasMissingDesignatedInitializers public class Encoder {
+    public static func BluetoothData(with bytes: [Swift.UInt8]) -> Foundation.Data
+    public static func BluetoothData(with hexStringArray: [BluetoothSDK.BluetoothIOTTool.HexString]) -> Foundation.Data
+    public static func BluetoothData(with hexString: BluetoothSDK.BluetoothIOTTool.HexString) -> Foundation.Data
+    public static func BluetoothData<T>(from value: T) -> Foundation.Data
+    public static func EncodeLittleEndianDecimalToByteArray<T>(from value: T) -> [Swift.UInt8] where T : Swift.FixedWidthInteger
+    public static func EncodeBigEndianDecimalToByteArray<T>(from value: T) -> [Swift.UInt8] where T : Swift.FixedWidthInteger
+    public static func Encode(from text: Swift.String, encoding: Swift.String.Encoding) -> Foundation.Data?
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers public class Decoder {
+    public static func decode<T>(data: Foundation.Data, to type: T.Type) -> T
+    public static func DecodeDataToBytes(data: Foundation.Data) -> [Swift.UInt8]
+    public static func DecodeDataToHexString(data: Foundation.Data, connector: Swift.String) -> Swift.String
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers public class Helper {
+    public static func HexString(with decimalString: BluetoothSDK.BluetoothIOTTool.DecimalString) -> BluetoothSDK.BluetoothIOTTool.HexString?
+    public static func HexString(with byte: Swift.UInt8) -> BluetoothSDK.BluetoothIOTTool.HexString
+    public static func Decimal<T>(with hexString: Swift.String) -> T? where T : BluetoothSDK.BluetoothIOTDataProtocol
+    @objc deinit
+  }
+  @objc deinit
+}
+extension Swift.Array where Element == Swift.UInt8 {
+  public func convertToData() -> Foundation.Data
+}
+public class BluetoothGATTService {
+  public var service: CoreBluetooth.CBService?
+  public init(uuid: CoreBluetooth.CBUUID)
+  @objc deinit
+}
+extension BluetoothSDK.BluetoothGATTService : Swift.Hashable, Swift.Equatable {
+  public static func == (lhs: BluetoothSDK.BluetoothGATTService, rhs: BluetoothSDK.BluetoothGATTService) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol BluetoothDelegate : ObjectiveC.NSObjectProtocol {
+  func bluetoothDidBeginScanning()
+  func bluetoothDidEndScan()
+  func bluetoothDidMeetError(_ error: BluetoothSDK.BluetoothError)
+  func bluetoothDidDiscoverPeripherals(_ peripherals: [BluetoothSDK.BluetoothDiscovery])
+}
+public typealias BluetoothWriteResult = Swift.Result<Swift.Void, BluetoothSDK.BluetoothGATTError>
+public typealias BluetoothWriteResultCallback = (_ result: BluetoothSDK.BluetoothWriteResult) -> Swift.Void
+public protocol BluetoothGATTDelegate : AnyObject {
+  func gatt(_ gatt: BluetoothSDK.BluetoothGATT, didChange initializeStatus: BluetoothSDK.BluetoothGattInitializeState)
+  func gatt(_ gatt: BluetoothSDK.BluetoothGATT, didChange connectStatus: CoreBluetooth.CBPeripheralState)
+  func gatt(_ gatt: BluetoothSDK.BluetoothGATT, didRead RSSI: Swift.Int)
+}
+extension BluetoothSDK.BluetoothGATTDelegate {
+  public func gatt(_ gatt: BluetoothSDK.BluetoothGATT, didChange initializeStatus: BluetoothSDK.BluetoothGattInitializeState)
+  public func gatt(_ gatt: BluetoothSDK.BluetoothGATT, didRead RSSI: Swift.Int)
+}
+public enum BluetoothGattInitializeState {
+  case notStarted
+  case initializing
+  case initialized
+  case failed
+  public static func == (a: BluetoothSDK.BluetoothGattInitializeState, b: BluetoothSDK.BluetoothGattInitializeState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc open class BluetoothGATT : ObjectiveC.NSObject, CoreBluetooth.CBPeripheralDelegate {
+  required public init(with discovery: BluetoothSDK.BluetoothDiscovery)
+  required public init(with deviceId: Swift.String)
+  open func setupGattProfile() -> BluetoothSDK.BluetoothGATTProfile
+  open func maximumWritePayloadLength() -> Swift.Int
+  public func getDeviceId() -> Swift.String?
+  public func getAdvertisementData() -> [Swift.String : Any]?
+  public func addBluetoothGattDelegate(_ delegate: BluetoothSDK.BluetoothGATTDelegate)
+  public func removeBluetoothGattDelegate(_ delegate: BluetoothSDK.BluetoothGATTDelegate)
+  public func writeData<T>(_ data: T, characteristic: BluetoothSDK.BluetoothGATTCharacteristic, completion: BluetoothSDK.BluetoothWriteResultCallback?) where T : BluetoothSDK.BluetoothSendableDataProtocol
+  public func readData<T>(characteristic: BluetoothSDK.BluetoothGATTCharacteristic, completion: BluetoothSDK.BluetoothReadResultCallback<T>?) where T : BluetoothSDK.BluetoothReceivableDataProtocol
+  public func listenTo<T>(characteristic: BluetoothSDK.BluetoothGATTCharacteristic, notify: Swift.Bool, completion: BluetoothSDK.BluetoothSetNotifyResultCallback?, notifyDataCallback: BluetoothSDK.BluetoothReadResultCallback<T>?) where T : BluetoothSDK.BluetoothReceivableDataProtocol
+  @objc override dynamic public var hash: Swift.Int {
+    @objc get
+  }
+  @objc public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverServices error: Swift.Error?)
+  @objc public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverCharacteristicsFor service: CoreBluetooth.CBService, error: Swift.Error?)
+  @objc public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didWriteValueFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+  @objc public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateNotificationStateFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+  @objc public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateValueFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+  @objc deinit
+}
+extension Swift.UInt32 : BluetoothSDK.BluetoothIOTDataProtocol {
+  public typealias StructureType = Swift.UInt32
+  public static func TypeString() -> Swift.String
+}
+extension Swift.UInt32 : BluetoothSDK.BluetoothSendableDataProtocol, BluetoothSDK.BluetoothReceivableDataProtocol {
+}
+public typealias BluetoothSetNotifyResult = Swift.Result<(uuid: CoreBluetooth.CBUUID, notify: Swift.Bool), BluetoothSDK.BluetoothGATTError>
+public typealias BluetoothSetNotifyResultCallback = (BluetoothSDK.BluetoothSetNotifyResult) -> Swift.Void
+public typealias ListenCallback = (Swift.Result<Foundation.Data, BluetoothSDK.BluetoothGATTError>) -> Swift.Void
+public protocol BluetoothReceivableDataProtocol {
+  init(bluetoothData: Foundation.Data)
+  func headerDataFlag() -> Foundation.Data?
+  func tailDataFlag() -> Foundation.Data?
+}
+@objc public class BluetoothConfiguration : ObjectiveC.NSObject {
+  public init(bluetoothUnavailableMessage: Swift.String? = nil, bluetoothPowerOffMessage: Swift.String? = nil, bluetoothUnauthorizedMessage: Swift.String? = nil, bluetoothScanTimeoutMessage: Swift.String? = nil)
+  @objc deinit
+}
+public protocol BluetoothSendableDataProtocol {
+  func bluetoothData() -> Foundation.Data
+}
+public typealias BluetoothReadResult<T> = Swift.Result<T, BluetoothSDK.BluetoothGATTError> where T : BluetoothSDK.BluetoothReceivableDataProtocol
+public typealias BluetoothReadResultCallback<T> = (BluetoothSDK.BluetoothReadResult<T>) -> Swift.Void where T : BluetoothSDK.BluetoothReceivableDataProtocol
+public class BluetoothGATTProfile {
+  public init(characteristics: [BluetoothSDK.BluetoothGATTCharacteristic])
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class BluetoothDiscovery {
+  public var localName: Swift.String {
+    get
+  }
+  public var rssiValue: Foundation.NSNumber {
+    get
+  }
+  public var deviceId: Swift.String?
+  @objc deinit
+}
+extension BluetoothSDK.BluetoothDiscovery : Swift.Hashable, Swift.Equatable {
+  public static func == (lhs: BluetoothSDK.BluetoothDiscovery, rhs: BluetoothSDK.BluetoothDiscovery) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Swift.UInt64 : BluetoothSDK.BluetoothIOTDataProtocol {
+  public typealias StructureType = Swift.UInt64
+  public static func TypeString() -> Swift.String
+}
+extension Swift.UInt64 : BluetoothSDK.BluetoothSendableDataProtocol, BluetoothSDK.BluetoothReceivableDataProtocol {
+}
+public typealias BluetoothInitializeResult = Swift.Result<Swift.Void, BluetoothSDK.BluetoothGATTError>
+@objc public enum BluetoothGATTConnectPriority : Swift.Int {
+  case required
+  case defaultHigh
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Swift.Int8 : BluetoothSDK.BluetoothSendableDataProtocol, BluetoothSDK.BluetoothReceivableDataProtocol {
+}
+extension Swift.String : BluetoothSDK.BluetoothIOTDataProtocol {
+  public typealias StructureType = Swift.String
+  public static func TypeString() -> Swift.String
+}
+extension Swift.String : BluetoothSDK.BluetoothSendableDataProtocol, BluetoothSDK.BluetoothReceivableDataProtocol {
+  public init(bluetoothData: Foundation.Data)
+  public func bluetoothData() -> Foundation.Data
+  public func headerDataFlag() -> Foundation.Data?
+  public func tailDataFlag() -> Foundation.Data?
+}
+extension Swift.BinaryInteger {
+  public func bluetoothData() -> Foundation.Data
+  public init(bluetoothData: Foundation.Data)
+  public func headerDataFlag() -> Foundation.Data?
+  public func tailDataFlag() -> Foundation.Data?
+}
+@_inheritsConvenienceInitializers @objc public class BluetoothKit : ObjectiveC.NSObject {
+  public static func initSDK(with configuration: BluetoothSDK.BluetoothConfiguration = BluetoothConfiguration()) -> Swift.Result<Swift.Void, BluetoothSDK.BluetoothError>
+  public static func startActiveScan(with model: BluetoothSDK.BLEScanModel, delegate: BluetoothSDK.BluetoothDelegate)
+  public static func stopActiveScan(delegate: BluetoothSDK.BluetoothDelegate)
+  public static func connectBluetoothDiscovery<T>(_ discovery: BluetoothSDK.BluetoothDiscovery) -> T where T : BluetoothSDK.BluetoothGATT
+  public static func connectGatt<T>(with deviceId: Swift.String) -> T where T : BluetoothSDK.BluetoothGATT
+  public static func disconnectDevice(_ gatt: BluetoothSDK.BluetoothGATT)
+  public static func reconnectDevice(_ gatt: BluetoothSDK.BluetoothGATT)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class BLEScanModel : ObjectiveC.NSObject {
+  public init(advServiceUUIDs: [CoreBluetooth.CBUUID], timeout: Swift.Double)
+  @objc deinit
+}
+extension Foundation.Data : BluetoothSDK.BluetoothSendableDataProtocol, BluetoothSDK.BluetoothReceivableDataProtocol {
+  public func headerDataFlag() -> Foundation.Data?
+  public func tailDataFlag() -> Foundation.Data?
+  public func bluetoothData() -> Foundation.Data
+  public init(bluetoothData: Foundation.Data)
+}
+public struct BluetoothGATTCharacteristicType : Swift.OptionSet {
+  public let rawValue: Swift.Int
+  public static let writeWithResponse: BluetoothSDK.BluetoothGATTCharacteristicType
+  public static let writeWithoutResponse: BluetoothSDK.BluetoothGATTCharacteristicType
+  public static let read: BluetoothSDK.BluetoothGATTCharacteristicType
+  public static let notify: BluetoothSDK.BluetoothGATTCharacteristicType
+  public init(rawValue: Swift.Int)
+  public typealias ArrayLiteralElement = BluetoothSDK.BluetoothGATTCharacteristicType
+  public typealias Element = BluetoothSDK.BluetoothGATTCharacteristicType
+  public typealias RawValue = Swift.Int
+}
+public class BluetoothGATTCharacteristic {
+  public var characteristic: CoreBluetooth.CBCharacteristic?
+  final public let service: BluetoothSDK.BluetoothGATTService
+  public init(uuid: CoreBluetooth.CBUUID, type: BluetoothSDK.BluetoothGATTCharacteristicType, service: BluetoothSDK.BluetoothGATTService)
+  @objc deinit
+}
+public protocol BluetoothIOTDataProtocol {
+  associatedtype StructureType
+  static func TypeString() -> Swift.String
+}
+public enum BluetoothError : Swift.Error {
+  case unsupported
+  case poweredOff
+  case unauthorized
+  case unknown
+  case scanTimeout
+  public static func == (a: BluetoothSDK.BluetoothError, b: BluetoothSDK.BluetoothError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum BluetoothGATTError : Swift.Error {
+  case gattInitialFailed
+  case gattDisconnected
+  case gattWriteFailed
+  case gattReadFailed
+  case gattNotifyFailed
+  case writeNotSupport(characteristicUUID: Swift.String)
+}
+extension BluetoothSDK.BluetoothGattInitializeState : Swift.Equatable {}
+extension BluetoothSDK.BluetoothGattInitializeState : Swift.Hashable {}
+extension BluetoothSDK.BluetoothGATTConnectPriority : Swift.Equatable {}
+extension BluetoothSDK.BluetoothGATTConnectPriority : Swift.Hashable {}
+extension BluetoothSDK.BluetoothGATTConnectPriority : Swift.RawRepresentable {}
+extension BluetoothSDK.BluetoothError : Swift.Equatable {}
+extension BluetoothSDK.BluetoothError : Swift.Hashable {}
