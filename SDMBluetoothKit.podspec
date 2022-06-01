@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name                  = 'SDMBluetoothKit'
-  s.version               = '0.0.1'
+  s.version               = '0.0.2'
   s.summary               = 'Bluetooth SDK'
   s.description           = <<-DESC
     BluetoothKit is a SDK that allows you easily and quickly develop an application with CoreBluetooth.
