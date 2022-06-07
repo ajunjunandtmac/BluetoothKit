@@ -79,7 +79,7 @@ extension BluetoothSDK.BluetoothGATTService : Swift.Hashable, Swift.Equatable {
     get
   }
 }
-public protocol BluetoothDelegate : ObjectiveC.NSObjectProtocol {
+public protocol BluetoothDelegate : AnyObject {
   func bluetoothDidBeginScanning()
   func bluetoothDidEndScan()
   func bluetoothDidMeetError(_ error: BluetoothSDK.BluetoothError)

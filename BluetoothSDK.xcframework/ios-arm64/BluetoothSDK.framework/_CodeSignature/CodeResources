@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/BluetoothDelegate.swift</key>
 		<data>
-		vEXLXKHwdsCi4wEx/M9zxHUwCtQ=
+		GdcrnHov/gZeRoKR8Z4iVcGf7G0=
 		</data>
 		<key>Headers/BluetoothDiscovery.swift</key>
 		<data>
@@ -74,11 +74,11 @@
 		</data>
 		<key>Modules/BluetoothSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		vNH1DkfxnqpJ/mqPGcLrbog5FIY=
+		dY31ZjYf0lswcQqdeNneCyR+REk=
 		</data>
 		<key>Modules/BluetoothSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		GRH3M0t8xqixZPdC/oRcqiBKJm8=
+		+sfVBbPcjlW6nTOMdy4a6nJunRU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -105,7 +105,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mVsMkpZv1Ajjxfngb9DUWW7p7Eyjc4yg2tIoaf4SOw4=
+			XSMCnFxDg+e6ULBZ53UEYqfTg+81VaGiTd1J8CI+sa4=
 			</data>
 		</dict>
 		<key>Headers/BluetoothDiscovery.swift</key>
@@ -203,14 +203,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oqaBkOK0moyGTiSKjRNZJW4F2qGmKsR65v2ZsxeM5kg=
+			eFVIekUQ9VV70ElNzmf246HQl3Krluh+DULlVD5qO1s=
 			</data>
 		</dict>
 		<key>Modules/BluetoothSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RSBC56ssadP7BfkJAgkpPeHJ9uw+By67mW/2ELJQypc=
+			BPQ+fkJJut1G2dXZpxrTLWgGxg7DnlzA6gkrJIV/vow=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

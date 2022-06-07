@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol BluetoothDelegate: NSObjectProtocol {
+public protocol BluetoothDelegate: AnyObject {
     func bluetoothDidBeginScanning()
     func bluetoothDidEndScan()
     func bluetoothDidMeetError(_ error: BluetoothError)
