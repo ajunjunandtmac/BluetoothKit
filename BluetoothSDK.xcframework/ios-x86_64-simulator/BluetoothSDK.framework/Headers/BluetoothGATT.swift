@@ -110,6 +110,11 @@ open class BluetoothGATT: NSObject, CBPeripheralDelegate {
     public func getDeviceId() -> String? {
         return deviceId
     }
+    
+    public func getDeviceName() -> String? {
+        return localName
+    }
+
 
     /// get the broadcast advertisementData of the bluetooth peripheral
     /// - Returns: advertisementData

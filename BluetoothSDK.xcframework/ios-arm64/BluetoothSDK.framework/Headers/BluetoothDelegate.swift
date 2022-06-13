@@ -9,6 +9,7 @@
 import Foundation
 
 public protocol BluetoothDelegate: AnyObject {
+    func bluetoothReady()
     func bluetoothDidBeginScanning()
     func bluetoothDidEndScan()
     func bluetoothDidMeetError(_ error: BluetoothError)

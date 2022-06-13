@@ -27,7 +27,7 @@
     
     /// User cancel scanning
     /// - Parameter delegate: scan status delegate
-    public static func stopActiveScan(delegate: BluetoothDelegate) {
+    public static func stopActiveScan(delegate: BluetoothDelegate? = nil) {
         BLECentralManager.shared.stopScan(delegate: delegate)
     }
     

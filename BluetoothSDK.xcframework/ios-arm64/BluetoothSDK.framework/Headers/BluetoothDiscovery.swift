@@ -50,6 +50,6 @@ extension BluetoothDiscovery: Hashable, Equatable {
     }
     
     public func hash(into hasher: inout Hasher) {
-        hasher.combine(peripheral.identifier)
+        hasher.combine(identifier)
     }
 }

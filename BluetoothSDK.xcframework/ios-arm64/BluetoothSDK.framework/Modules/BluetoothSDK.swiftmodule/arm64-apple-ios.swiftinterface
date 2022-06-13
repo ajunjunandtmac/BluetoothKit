@@ -80,6 +80,7 @@ extension BluetoothSDK.BluetoothGATTService : Swift.Hashable, Swift.Equatable {
   }
 }
 public protocol BluetoothDelegate : AnyObject {
+  func bluetoothReady()
   func bluetoothDidBeginScanning()
   func bluetoothDidEndScan()
   func bluetoothDidMeetError(_ error: BluetoothSDK.BluetoothError)
@@ -113,6 +114,7 @@ public enum BluetoothGattInitializeState {
   open func setupGattProfile() -> BluetoothSDK.BluetoothGATTProfile
   open func maximumWritePayloadLength() -> Swift.Int
   public func getDeviceId() -> Swift.String?
+  public func getDeviceName() -> Swift.String?
   public func getAdvertisementData() -> [Swift.String : Any]?
   public func addBluetoothGattDelegate(_ delegate: BluetoothSDK.BluetoothGATTDelegate)
   public func removeBluetoothGattDelegate(_ delegate: BluetoothSDK.BluetoothGATTDelegate)
@@ -210,7 +212,7 @@ extension Swift.BinaryInteger {
 @_inheritsConvenienceInitializers @objc public class BluetoothKit : ObjectiveC.NSObject {
   public static func initSDK(with configuration: BluetoothSDK.BluetoothConfiguration = BluetoothConfiguration()) -> Swift.Result<Swift.Void, BluetoothSDK.BluetoothError>
   public static func startActiveScan(with model: BluetoothSDK.BLEScanModel, delegate: BluetoothSDK.BluetoothDelegate)
-  public static func stopActiveScan(delegate: BluetoothSDK.BluetoothDelegate)
+  public static func stopActiveScan(delegate: BluetoothSDK.BluetoothDelegate? = nil)
   public static func connectBluetoothDiscovery<T>(_ discovery: BluetoothSDK.BluetoothDiscovery) -> T where T : BluetoothSDK.BluetoothGATT
   public static func connectGatt<T>(with deviceId: Swift.String) -> T where T : BluetoothSDK.BluetoothGATT
   public static func disconnectDevice(_ gatt: BluetoothSDK.BluetoothGATT)
