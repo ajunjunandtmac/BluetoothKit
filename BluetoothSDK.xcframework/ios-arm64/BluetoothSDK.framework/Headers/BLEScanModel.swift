@@ -13,6 +13,10 @@ import CoreBluetooth
     let advServiceUUIDs: [CBUUID]
     let timeout: Double
     
+    /// Scan configurations
+    /// - Parameters:
+    ///   - advServiceUUIDs: advertisement UUID
+    ///   - timeout: negative or 0 value means no timeout limited
     public init(advServiceUUIDs: [CBUUID], timeout: Double) {
         self.advServiceUUIDs = advServiceUUIDs
         self.timeout = timeout

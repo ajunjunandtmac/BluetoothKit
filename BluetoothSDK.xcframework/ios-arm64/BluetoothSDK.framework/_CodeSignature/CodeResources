@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/BLEScanModel.swift</key>
 		<data>
-		A7uXz/Hr2uzql3hS8lMNnx806vo=
+		I1/N47jw2DJUqai88iyUsx0niog=
 		</data>
 		<key>Headers/BluetoothConfiguration.swift</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Headers/BluetoothKit.swift</key>
 		<data>
-		VgBLpESZwX8naLKL6MzbfO6UP/8=
+		tT9RUiO7+JEFf8UpjsDQCWqdgNw=
 		</data>
 		<key>Headers/BluetoothSDK-Swift.h</key>
 		<data>
@@ -70,15 +70,15 @@
 		</data>
 		<key>Modules/BluetoothSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		NwNtB3R6eE+5YWDbTvVfQ6CuMIQ=
+		UHJilvpfAyVYGM7knUSdHawZV2w=
 		</data>
 		<key>Modules/BluetoothSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		mD9b0F6qc8by3K8IMUGRM9bfb3M=
+		puHpELMGMhn7FvTfoirhIYVd/sg=
 		</data>
 		<key>Modules/BluetoothSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		HkpsbS5sgtqxIgrZY+xjDiDd/rM=
+		8kc9yhE5gI9G8xae1GfQcpERYKg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -91,7 +91,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+rZkJXf332yDNw6i31rb6S16AQlU0iiH7TW5qjlN5Bk=
+			bgSVGVWuWHUsujhFHmgmMpEiLbRj6ujX03vY+6U4/LQ=
 			</data>
 		</dict>
 		<key>Headers/BluetoothConfiguration.swift</key>
@@ -175,7 +175,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YxE2azM0CW8+vpF9syZ7d6C95iuEh38dn3BjvVREC1Y=
+			NGZ+bo/wN6lWClc+qkA1O/K3PCmSYuzAFyoddqEEnAA=
 			</data>
 		</dict>
 		<key>Headers/BluetoothSDK-Swift.h</key>
@@ -196,21 +196,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			L/BTDpqvU7ijwsJeEl3mHbfsUtKMoFUg+WhCQgLC4qI=
+			KwZoVGZuBbxpghuRFgnhc6kY4D213xLFr9jxvle0GVw=
 			</data>
 		</dict>
 		<key>Modules/BluetoothSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qaDx3uyvIdZQto/Mv3+WG3sUZS5H9RqUg5e0EIZWnN8=
+			KNDsXW+Ex/FUlmSF8ahPxlVt1XwRulscW9zssDbs9U8=
 			</data>
 		</dict>
 		<key>Modules/BluetoothSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TmxTwIp9rDSC43AgoQ3mEa9r/ZclzseRzUZNfKsZnbo=
+			JQLfPrJwmuFRGhY5XxWTAJfvJsL71NGguYmy3ZNrxbY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

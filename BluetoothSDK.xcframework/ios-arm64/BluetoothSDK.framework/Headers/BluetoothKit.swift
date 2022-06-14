@@ -56,4 +56,8 @@
     public static func reconnectDevice(_ gatt: BluetoothGATT) {
         BLECentralManager.shared.reconnectGatt(gatt)
     }
+    
+    public static var isScanning: Bool {
+        return BLECentralManager.shared.isScanning
+    }
 }

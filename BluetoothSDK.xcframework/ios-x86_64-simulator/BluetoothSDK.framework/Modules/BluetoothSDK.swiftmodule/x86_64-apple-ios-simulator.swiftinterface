@@ -217,6 +217,9 @@ extension Swift.BinaryInteger {
   public static func connectGatt<T>(with deviceId: Swift.String) -> T where T : BluetoothSDK.BluetoothGATT
   public static func disconnectDevice(_ gatt: BluetoothSDK.BluetoothGATT)
   public static func reconnectDevice(_ gatt: BluetoothSDK.BluetoothGATT)
+  public static var isScanning: Swift.Bool {
+    get
+  }
   @objc override dynamic public init()
   @objc deinit
 }
