@@ -215,13 +215,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
-SWIFT_CLASS("_TtC12BluetoothSDK12BLEScanModel")
-@interface BLEScanModel : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
 SWIFT_CLASS("_TtC12BluetoothSDK22BluetoothConfiguration")
 @interface BluetoothConfiguration : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -231,6 +224,7 @@ SWIFT_CLASS("_TtC12BluetoothSDK22BluetoothConfiguration")
 @class CBPeripheral;
 @class CBService;
 @class CBCharacteristic;
+@class NSNumber;
 
 /// An abstract class which representing a Bluetooth peripheral
 SWIFT_CLASS("_TtC12BluetoothSDK13BluetoothGATT")
@@ -241,6 +235,7 @@ SWIFT_CLASS("_TtC12BluetoothSDK13BluetoothGATT")
 - (void)peripheral:(CBPeripheral * _Nonnull)peripheral didWriteValueForCharacteristic:(CBCharacteristic * _Nonnull)characteristic error:(NSError * _Nullable)error;
 - (void)peripheral:(CBPeripheral * _Nonnull)peripheral didUpdateNotificationStateForCharacteristic:(CBCharacteristic * _Nonnull)characteristic error:(NSError * _Nullable)error;
 - (void)peripheral:(CBPeripheral * _Nonnull)peripheral didUpdateValueForCharacteristic:(CBCharacteristic * _Nonnull)characteristic error:(NSError * _Nullable)error;
+- (void)peripheral:(CBPeripheral * _Nonnull)peripheral didReadRSSI:(NSNumber * _Nonnull)RSSI error:(NSError * _Nullable)error;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end

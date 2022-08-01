@@ -6,27 +6,27 @@
 	<dict>
 		<key>Headers/BLEScanModel.swift</key>
 		<data>
-		I1/N47jw2DJUqai88iyUsx0niog=
+		REih01ybx78tUhllBl7bKh8/N9k=
 		</data>
 		<key>Headers/BluetoothConfiguration.swift</key>
 		<data>
-		WnfYARd+DKknpmIOuXY8MMYbm/E=
+		tKX+j5mrIT99mXXD1kHC2WUUbTo=
 		</data>
 		<key>Headers/BluetoothDelegate.swift</key>
 		<data>
-		M6Skto9Uc4xCdU7Pd9d1FoGMTn0=
+		ptOuRLBJlJT3vvzTLrAEtDkWSFY=
 		</data>
 		<key>Headers/BluetoothDiscovery.swift</key>
 		<data>
-		y2rCv1IGn/PGu0+TvXJ+F2IBc44=
+		7Dj6hdXpl+2N1UZVOgjRSQ1qco4=
 		</data>
 		<key>Headers/BluetoothError.swift</key>
 		<data>
-		vJrvRHcHFVs6JK6ltCG/xFd+HME=
+		7uzJdrDi1MYpn87cCamUjgcRgD8=
 		</data>
 		<key>Headers/BluetoothGATT.swift</key>
 		<data>
-		0X9b0wm2qO8PVzcCVWWPy6lVgiE=
+		1SU6UW1OXMSC6nJVf08X0jqmzY8=
 		</data>
 		<key>Headers/BluetoothGATTCharacteristic.swift</key>
 		<data>
@@ -50,15 +50,15 @@
 		</data>
 		<key>Headers/BluetoothIOTTool.swift</key>
 		<data>
-		N3jW8WD+4709tRyga2LU9PmYxjY=
+		yYYFFaYz8pa/4b9YxNk95wUpl+8=
 		</data>
 		<key>Headers/BluetoothKit.swift</key>
 		<data>
-		tT9RUiO7+JEFf8UpjsDQCWqdgNw=
+		wn1g/jDNKGyJwHDIIlxUyfhj7vI=
 		</data>
 		<key>Headers/BluetoothSDK-Swift.h</key>
 		<data>
-		no/I/65b/spiK51h48XZVqm9NRo=
+		QgBAe87//T2KCD68YToHmm2n90Q=
 		</data>
 		<key>Headers/BluetoothSDK.h</key>
 		<data>
@@ -70,15 +70,15 @@
 		</data>
 		<key>Modules/BluetoothSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		N+ePiWUv6srW9FPIJ0lKpCLjCcY=
+		j7Ddc+grTD4JJLyzNPHJVd7hs+A=
 		</data>
 		<key>Modules/BluetoothSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		83f5wBsiX8c4dfWOKJLVTdUp8Ps=
+		dcBIng3zmzcFtCKL/8NrsMkduic=
 		</data>
 		<key>Modules/BluetoothSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		yGo7vABZ1DD8ezLaEyaGniziqgc=
+		KgQV4ZgkDDvRqLnowPG/2GBjdBo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -91,42 +91,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bgSVGVWuWHUsujhFHmgmMpEiLbRj6ujX03vY+6U4/LQ=
+			dEaGZ2/xr/SNwFzeq3zWORozn4wJP8aCrJ5DHATmUVQ=
 			</data>
 		</dict>
 		<key>Headers/BluetoothConfiguration.swift</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8Gj7YLYvXsbxzNUOgrKrAwLnvZz/tElKcGP/7UDYfEs=
+			Csp6fwAk6DkuyHZC0g7kEZuvWCcnJeamfcdXWhlh6wI=
 			</data>
 		</dict>
 		<key>Headers/BluetoothDelegate.swift</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MbQ6n2Khr91TxDtELzixGs+VWm2fn/XsO7x2+htH4i0=
+			xdsjEjB8Nml9fCc0CcfCk7iqUanbpNfNzvCuwiyI4+o=
 			</data>
 		</dict>
 		<key>Headers/BluetoothDiscovery.swift</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fOG8GNG/641k+m+MvGK3LjvJnKPDieKM2o4jO+VlTq4=
+			rA4KxZSm5F7P/fnftDIng3TOkSUBJQ4CP0CQ8U7BCOw=
 			</data>
 		</dict>
 		<key>Headers/BluetoothError.swift</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PVvrDyrKZx8YpN6p0vnHS1kD9YmDcc9ZEFC6U/QVWzA=
+			FM119T6JvVC/1jgHTGpz3ZAgyfV+3rmnT5VbpQZ4530=
 			</data>
 		</dict>
 		<key>Headers/BluetoothGATT.swift</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			paGD5SRzeCuwMb5jagwklsJ4Eta+QMrEVwAxD9GpJs4=
+			h1q85+Jgg/fBc5LmYL3UtiRvwTgFQDs7AXYKgJpOxSY=
 			</data>
 		</dict>
 		<key>Headers/BluetoothGATTCharacteristic.swift</key>
@@ -168,21 +168,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/K77Xs+hSU3sL8Jd3o/4PswD+Q0rPAEWF8yYoN3I7hw=
+			Hq2cICl25pKmbZ1Nba9cllijU2W7wj3cRncrF4aUX5Q=
 			</data>
 		</dict>
 		<key>Headers/BluetoothKit.swift</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NGZ+bo/wN6lWClc+qkA1O/K3PCmSYuzAFyoddqEEnAA=
+			4OgK+N9l+aJvow4do5DTidHuEz7608UoAlitjeTp8gE=
 			</data>
 		</dict>
 		<key>Headers/BluetoothSDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			O3xmffLmiMKxnsYcNhNFMJXym5b+C7tsvbRwQj+Ccq4=
+			fAD1LnqQ75LA23kJoYpJVQdBK9WOrNfHsHX5qQHd6jM=
 			</data>
 		</dict>
 		<key>Headers/BluetoothSDK.h</key>
@@ -196,21 +196,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SI+mQOCyXshIRoom1kerpxycyQinsykczoizURobT2c=
+			ORPK7dBQ59TDj1pwMnn4l4AiTq8esopXgl/ha4/wP1A=
 			</data>
 		</dict>
 		<key>Modules/BluetoothSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Wsh6JapLDfNV1vnY196UiQReuALukRKdEWHmWdi6MnM=
+			xzILxJ22qdVgqK+j05pUHhV6ui45KZ/58xKPaTWZ96s=
 			</data>
 		</dict>
 		<key>Modules/BluetoothSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8yYo1qUY2P9VgUooNK5kJKZZakiXUyBbvgYmxMyyY6s=
+			scEANkuVTHN/q0IgHN/P8bG/vJ4h7JWNmEagLoYO+n8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -40,7 +40,14 @@ public class BluetoothDiscovery {
         self.advertisementData = advertisementData
         self.RSSI = RSSI
         self.peripheral = peripheral
-        self.deviceId = BluetoothUtils.getDeviceMacAddress(from: advertisementData)
+//        BTLog([peripheral.name, peripheral.identifier.uuidString])
+        if let deviceId = BluetoothUtils.getDeviceMacAddress(from: advertisementData) {
+            // FIXME: try to get an unique identifier from the scanned peripheral
+            self.deviceId = peripheral.identifier.uuidString
+        } else {
+            self.deviceId = peripheral.identifier.uuidString
+//            BTLog("\(#file) no value with CBAdvertisementDataManufacturerDataKey!")
+        }
     }
 }
 

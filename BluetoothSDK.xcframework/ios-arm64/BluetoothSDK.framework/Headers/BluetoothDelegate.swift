@@ -7,11 +7,11 @@
 //
 
 import Foundation
+import CoreBluetooth
 
 public protocol BluetoothDelegate: AnyObject {
-    func bluetoothReady()
     func bluetoothDidBeginScanning()
     func bluetoothDidEndScan()
-    func bluetoothDidMeetError(_ error: BluetoothError)
     func bluetoothDidDiscoverPeripherals(_ peripherals: [BluetoothDiscovery])
+    func bluetoothDidDiscoverConnectedPeripherals(_ peripherals: [CBPeripheral])
 }

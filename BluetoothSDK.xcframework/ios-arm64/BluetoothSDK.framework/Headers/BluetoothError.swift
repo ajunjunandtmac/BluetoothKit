@@ -9,6 +9,7 @@
 import Foundation
 
 public enum BluetoothError: Error {
+    case resetting
     case unsupported
     case poweredOff
     case unauthorized
@@ -19,8 +20,10 @@ public enum BluetoothError: Error {
 public enum BluetoothGATTError: Error {
     case gattInitialFailed
     case gattDisconnected
-    case gattWriteFailed
+    case gattWriteFailed(errorMsg: String?)
     case gattReadFailed
-    case gattNotifyFailed
+    case gattNotifyFailed(errorMsg: String?)
     case writeNotSupport(characteristicUUID: String)
+    case bluetoothReadyFailed
+    case bluetoothScanFailed
 }

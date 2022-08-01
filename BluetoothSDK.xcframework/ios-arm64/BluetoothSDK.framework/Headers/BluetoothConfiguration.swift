@@ -9,7 +9,7 @@
 import UIKit
 
 @objc public class BluetoothConfiguration: NSObject {
-    let defaultBluetoothUnavailableMessage: String = "Bluetooth unavailable"
+    let defaultBluetoothUnavailableMessage: String = "Bluetooth is initializing"
     let defaultBluetoothPowerOffMessage: String = "Bluetooth is turned off"
     let defaultBluetoothUnauthorizedMessage: String = "Bluetooth permission is not authorized"
     let defaultBluetoothScanTimeoutMessage: String = "Scan timeout, please rescan"
